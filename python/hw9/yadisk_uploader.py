@@ -36,7 +36,7 @@ class YaUploader:
 if __name__ == '__main__':
 
     if len(sys.argv) != 2:
-        print('Either no arguments passed or too many of them. '	
+        print('Either no arguments passed or too many of them. '
               r'Try to run this script like this: py yadisk_uploader.py C:\path\to\some_file')
         sys.exit()
 
