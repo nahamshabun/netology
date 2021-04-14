@@ -35,14 +35,16 @@ def get_wiki_url(country_name):
     return f"{address}{url_country_name}"
 
 
-# result = {}
-# countries_iter = CountriesIterator("./countries.json")
-# for country_name in countries_iter:
-#     result[country_name] = get_wiki_url(country_name)
-#
-# with open("./countries_links.json", "w", encoding="utf-8") as f:
-#     json.dump(result, f, indent=4, ensure_ascii=False)
+# code to check iterator task
+result = {}
+countries_iter = CountriesIterator("./countries.json")
+for country_name in countries_iter:
+    result[country_name] = get_wiki_url(country_name)
 
+with open("./countries_links.json", "w", encoding="utf-8") as f:
+    json.dump(result, f, indent=4, ensure_ascii=False)
+
+# code to check generator task
 gen = generate_line_hashes("./countries.json")
 while True:
     try:
